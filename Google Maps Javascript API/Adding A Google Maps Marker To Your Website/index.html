@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      #map {
+        height: 1000px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var newnham = {lat: 52.022126, lng: -0.185813};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: newnham
+        });
+        var marker = new google.maps.Marker({
+          position: newnham,
+          map: map
+        });
+      }
+    </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCVpzxQ251gH95Af009wLTgp48ZPHNZx8&callback=initMap"></script>
+</html>
